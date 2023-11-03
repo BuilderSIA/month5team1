@@ -4,12 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
     
 
+    <header>
+      
+        <div class="container">
+  
+          <nav class="nav">
+            <div class="nav__logo">
+  
+              <a href="./home.html">
+                <img src="./images/logo (1).png" alt="logo" />
+              </a>
+  
+            </div>
+  
+            <div class="nav__formBox">
+  
+              <form class="nav__form">
+  
+                <button class="nav__form__btn">
+                  <a href="#">
+                    <i class="fa-solid fa-bars"></i>
+                  </a>
+                  <p>Каталог</p>
+                </button>
+  
+                <div class="nav__form__inp">
+  
+                  <input class="nav__form__inp__input"
+                    type="text"
+                    placeholder="Найти товар"
+                  />
+  
+                  <button type="submit" class="search__btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+  
+                </div>
+              </form>
+  
+            </div>
+  
+            <div class="nav__card__list">
+  
+              <ul class="nav__card__list">
+  
+                <li class="nav__card__list__item">
+                  <a href="#">
+                    <i  class="fa-solid fa-heart"></i>
+                  <p>Избранное</p>
+                  </a>
+                </li>
+  
+                <li class="nav__card__list__item">
+                 <a href="#">
+                  <i class="fa-solid fa-cube"></i>
+                  <p>продукты</p>
+                 </a>
+                </li>
+  
+                <li class="nav__card__list__item">
+                  <a href="#">
+                    <i class="fa-solid fa-cart-plus"></i>
+                  <p>Корзина</p>
+                  </a>
+                </li>
+  
+              </ul>
+  
+            </div>
+  
+            <div class="nav__alex">
+  
+              <a href="#">
+                <div class="nav__alex__img">
+  
+                  <img src="./images/Otabek/avatar.png" alt="" />
+                  <p>Алексей</p>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+  
+          </nav>
+  
+        </div>
+  
+      </header>
+      <div class="hero">
+        <img src="./images/Otabek/img.png" alt="">
+        <h2 class="hero__text">Доставка бесплатно от 1000 ₽</h2>
+      </div>
 
+      <main>
+        <div class="container">
+  
+          <div class="section1">
+  
+            <div class="section1__menu">
+             <h2 class="section1__menu__title">
+              Акции
+             </h2>
+            </div>
+  
+            <!-- <div class="section1__title">
+  
+              <h1>Молоко, сыр, яйцо</h1>
+            </div>
+  
+            <div class="section1__box">
+  
+              <div class="section1__box__card1">
+                <h2>Фильтр</h2>
+                <div class="section1__box__card1__paragrf">
+                  <p class="paragrf">Цена</p>
+                  <p class="parag">Очистить</p>
+                </div>
+                <div class="section1__box__card1__inp">
+                  <input class="input11" type="text" number="1" placeholder="1" />
+                  <div class="minus"></div>
+                  <input class="input11" type="text" placeholder="100" />
+                </div>
+                <input type="range" id="price" name="points" value="0" min="0" max="100" />
+              </div> -->
+              <ul class="pradact">
+                
 
+             
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <h1>Наши магазины</h1>
+          <div class="nashi">
+            <button class="nashi__btn">п.Щельяюр</button>
+            <button class="nashi__btn">д.Вертеп</button>
+            <button class="nashi__btn">с.Краснобор</button>
+            <button class="nashi__btn">д.Диюр</button>
+          </div>
+        <div id="googleMap" style="width:100%;height:400px;"></div>
+          
+        
+        </div>
+        <footer>
+          <div class="container">
+            <ul class="footer__list">
+              <li class="footer__list__item"></li>
+              <li class="footer__list__item"></li>
+              <li class="footer__list__item"></li>
+              <li class="footer__list__item"></li>
+              <li class="footer__list__item"></li>
+              <li class="footer__list__item"></li>
+            </ul>
+          </div>
+        </footer>
+  
+      </main>
+
+      
+
+      <script>
+        function myMap() {
+        var mapProp= {
+          center:new google.maps.LatLng(51.508742,-0.120850),
+          zoom:5,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        }
+        </script>
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOa4zM98qqq7UKw2hu68_pJdrhk9-nbUc&callback=myMap"></script>
+
+      <script src="./data.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>

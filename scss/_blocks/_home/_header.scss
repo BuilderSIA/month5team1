@@ -1,0 +1,107 @@
+header {
+    width: 1440px;
+    background-color: whitesmoke;
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+    display: flex;
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__alex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            &__img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+            }
+            & i {
+                transform: rotate(90deg);
+            }
+            & img {
+                width: 40px;
+                height: 40px;
+                flex-shrink: 0;
+                border-radius: 50px;
+                background:
+                    url(<path-to-image>),
+                    lightgray 50% / cover no-repeat;
+            }
+        }
+
+        &__card__list {
+            display: flex;
+            gap: 15px;
+            &__item {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        &__logo {
+            width: 152px;
+            height: 32px;
+        }
+        &__formBox {
+            .nav__form {
+                display: flex;
+                align-items: flex-start;
+                align-items: center;
+                gap: 16px;
+                flex: 1 0 0;
+                &__btn {
+                    display: flex;
+                    width: 140px;
+                    padding: 8px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 25px;
+                    border-radius: 4px;
+                    background: var(--main-secondary, #70c05b);
+                }
+                &__inp {
+                    display: flex;
+                    height: 40px;
+                    padding: 8px;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    gap: 10px;
+                    border-radius: 4px;
+                    border: 1px solid var(--main-secondary, #70c05b);
+                    background: var(--main-surface, #fff);
+                    &__input {
+                        border: 0;
+                        outline: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+.hero {
+    width: 1440px;
+    margin: 0 auto;
+    background-image: url(../../../images/Otabek/Group\ 7100.png);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__text {
+        color: var(--main-on-surface, #414141);
+        text-align: center;
+        font-family: Rubik;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+    }
+}
+#googleMap {
+    margin-top: 25px;
+}
