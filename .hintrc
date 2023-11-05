@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/keyboard": "off",
+    "axe/forms": "off"
+  }
+}
