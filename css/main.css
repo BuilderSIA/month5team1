@@ -167,20 +167,9 @@ header .nav__formBox .nav__form__inp__input {
 .hero {
   width: 1440px;
   margin: 0 auto;
-  background-image: url(../../../images/Otabek/Group\ 7100.png);
-  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.hero__text {
-  color: var(--main-on-surface, #414141);
-  text-align: center;
-  font-family: Rubik;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%;
 }
 
 #googleMap {
