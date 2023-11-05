@@ -167,9 +167,6 @@ header .nav__formBox .nav__form__inp__input {
 .hero {
   width: 1440px;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #googleMap {
@@ -178,7 +175,6 @@ header .nav__formBox .nav__form__inp__input {
 
 main {
   background-color: #fbf8ec;
-  border: 1px solid blue;
   width: 1440px;
   margin: 0 auto;
 }

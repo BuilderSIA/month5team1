@@ -3,7 +3,7 @@
     padding: 0%;
     box-sizing: border-box;
 }
-body{
+/* body{
     width: 100%;
     height: 220vh;
     display: flex;
@@ -11,12 +11,12 @@ body{
     flex-direction: column;
     background: var(--main-bg-page, #FBF8EC);
 
-}
-.container{
+} */
+/* .container{
     width: 83.3%;
     height: 100%;
 
-}
+} */
 
 
 .nav{
@@ -89,21 +89,21 @@ body{
     font-size: 22px;
     color: #414141;
 }
-.section1{
+/* .section1{
     width: 100%;
     height: 140vh;
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
-}
+} */
 
-.section1 .right{
+/* .section1 .right{
     width: 70%;
     height: 100%;
     position: absolute;
     margin-left: 100px;
    
-}
+} */
 .info{
     width: 100%;
     height: 50px;
@@ -136,22 +136,22 @@ body{
 li{
     list-style: none;
 }
-.section1 .right ul{
+/* .section1 .right ul{
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 50px;
     right: 0%;
-}
-.section1 .right ul li{
+} */
+/* .section1 .right ul li{
     width: 240px;
     height: 50vh;
     flex-direction: column;
     margin-top: 50px;
     color: #414141;
     margin-top: 100px;
-}
+} */
 
-.card{
+/* .card{
     width: 260px;
     height: 390px;
     display: flex;
@@ -162,7 +162,7 @@ li{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     border-radius: 5px;
     padding: 10px 20px 20px 0px;
-}
+} */
 .d_flex{
     width: 100%;
     display: flex;
@@ -230,3 +230,43 @@ footer ul{
     margin-left: 440px;
 }
 
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.list img{
+    width: 280px;
+    height: 280px;
+}
+.list h4{
+    width: 280px;
+}
+.prods{
+    width: 300px;
+    height: 500px;
+}
+.toCart {
+    width: 95%;
+    height: 50px;
+    margin: 15px auto;
+    background: white;
+    color: #5db647;
+    border: 1px solid #5db647;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 18px;
+  }
+  .toCart:focus {
+    outline: none !important;
+    border: 3px solid #5db647;
+  }
+  .toCart:hover {
+    background-color: #5db647;
+    color: white;
+  }
+
+  button:hover {
+    background: #969595;
+    color: #fff;
+  }

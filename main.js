@@ -1,9 +1,10 @@
+import getProd from "./js/utilits.js";
 
 
 let  elList = document.querySelector(".pradact")
 let elSearch = document.querySelector(".nav__form__inp__input")
 const form = document.querySelector(".nav__form")
-let elnash = document.querySelector (".nashi")
+let elnash = document.querySelector (".nashi");
 
 
 function renderData(){
@@ -19,8 +20,7 @@ function renderData(){
             <img
                 class="pradact__card__images__photo"
                 src="${element.image}"
-                alt="un"
-            />
+                alt="un"/>
             </div>
             <div class="like">
             <i class="fa-solid fa-heart"></i>
@@ -28,8 +28,8 @@ function renderData(){
             <div class="pradact__card__title">
             <h2>${element.price} ₽</h2>
             </div>
-            <h2>${element.title}</h2>
-           
+            <h4>${element.title}</h4>
+
             <div class="pradact__star">
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
@@ -49,6 +49,8 @@ function renderData(){
 renderData(allProducts)
 
 renderData(allProducts)
+
+
 
 
 // elSearch.addEventListener("input", () => {
