@@ -6,9 +6,11 @@ const form = document.querySelector(".nav__form")
 let elnash = document.querySelector (".nashi")
 
 
-
-function renderData(allData){
-    allData.map((element, i) => {
+function renderData(){
+    const url = "https://fakestoreapi.com/products"
+    fetch(url)
+    .then(res => res.json())
+    .then(data =>  data.map((element, i) => {
         
         let elItem = document.createElement("li")
         elItem.setAttribute("class", "pradact__card")    
@@ -16,18 +18,18 @@ function renderData(allData){
             <div class="pradact__card__images">
             <img
                 class="pradact__card__images__photo"
-                src="${element.productImg}"
+                src="${element.image}"
                 alt="un"
             />
+            </div>
+            <div class="like">
             <i class="fa-solid fa-heart"></i>
             </div>
             <div class="pradact__card__title">
-            <h2>${element.productPrice} ₽</h2>
+            <h2>${element.price} ₽</h2>
             </div>
-            <h2>${element.productName}</h2>
-            <h3 class="pradact__text">
-            ${element.productDesc}
-            </h3>
+            <h2>${element.title}</h2>
+           
             <div class="pradact__star">
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
@@ -40,8 +42,11 @@ function renderData(allData){
             </div>
         `
         elList.appendChild(elItem)
-    })
+    }))
+   
 }
+
+renderData(allProducts)
 
 renderData(allProducts)
 
