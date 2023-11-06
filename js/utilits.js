@@ -12,4 +12,3 @@ function setProd(p){
 }
 
 
-export default getProd

@@ -9,6 +9,7 @@ let log = document.getElementById("log");
 let add = document.getElementById("add");
 let hom = document.getElementById("hom");
 
+const toCart = document.getElementsByClassName('toCart');
 
 let url = 'https://fakestoreapi.com/products'
 
@@ -97,19 +98,37 @@ fetch(url)
         <button class="toCart" id="${item.id}">В корзину</button>
         </li>
         `
-        
     })
+
+    
+
     list.innerHTML = display.join(' ')
+    for(let i = 0;i<toCart.length; i++){
+        let add = toCart[i]
+        add.addEventListener('click',(e)=>{
+            let ID = e.target.getAttributeNode('id').value;
+            if(ID==data[i-1].id){
+                setProd(data[i])
+            }
+        })
+    }
 })
 
 
 
 
 
+function getProd(prod){
+    return localStorage.getItem(prod) ? JSON.parse(localStorage.getItem(prod)): [];
+}
 
 
-
-
+function setProd(p){
+    let item = p;
+    let items = getProd('product');
+    items.push(item);
+    localStorage.setItem('product',JSON.stringify(items))
+}
 
 
 

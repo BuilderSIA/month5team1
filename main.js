@@ -1,4 +1,4 @@
-import getProd from "./js/utilits.js";
+
 
 
 let  elList = document.querySelector(".pradact")
