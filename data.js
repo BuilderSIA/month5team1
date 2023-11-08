@@ -1,12 +1,12 @@
 
 let allProducts = [
     {
-        productId: 1,
-        productName: "Un",
-        productDesc: "Sifatli un mahsulotlari",
-        productImg: "./img/un.svg",
-        productPrice: 12233,
-        productIsSelected: false,
+        // productId: 1,
+        // productName: "Un",
+        // productDesc: "Sifatli un mahsulotlari",
+        // productImg: "./img/un.svg",
+        // productPrice: 12233,
+        // productIsSelected: false,
     },
     {
         productId: 1,

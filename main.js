@@ -18,7 +18,7 @@ sb.addEventListener('click', (e) => {
             let display = data.map((item) => {
                 if (item.title === elSearch.value) {
                     return `
-                <li>
+                <li class="listt">
                 <h2>${item.title}</h2>
                 <img
                 class="pradact__card__images__photo"

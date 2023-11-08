@@ -76,6 +76,10 @@ header .nav__formBox .nav__form__inp__input {
   outline: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1250px;
   width: 100%;
@@ -404,6 +408,10 @@ main {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.listt {
+  background-color: #414141;
 }
 
 .footer__list {

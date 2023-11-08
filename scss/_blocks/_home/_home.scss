@@ -12,7 +12,7 @@ header {
             justify-content: center;
             gap: 10px;
             &__img {
-                display: flex;
+                display: flex;  
                 align-items: center;
                 justify-content: center;
                 gap: 10px;
@@ -80,4 +80,8 @@ header {
             }
         }
     }
+}
+
+a{
+    text-decoration: none;
 }
