@@ -3,15 +3,47 @@
 let  elList = document.querySelector(".pradact")
 let elSearch = document.querySelector(".nav__form__inp__input")
 const form = document.querySelector(".nav__form")
-let elnash = document.querySelector (".nashi")
+let elnash = document.querySelector(".nashi")
+
+const sb = document.querySelector('.search__btn');
+const url = "https://fakestoreapi.com/products"
+
+
+
+sb.addEventListener('click', (e) => {
+    e.preventDefault();
+    fetch(url)
+    .then((res) => res.json())
+        .then((data) => {
+            let display = data.map((item) => {
+                if (item.title === elSearch.value) {
+                    return `
+                <li>
+                <h2>${item.title}</h2>
+                <img
+                class="pradact__card__images__photo"
+                src="${item.image}"
+                alt="un"
+            />
+            <div class="pradact__card__title">
+            <h2>${item.price} ₽</h2>
+            </div>
+                </li>
+                    `
+            }
+            })
+            elList.innerHTML = display.join(" ");
+    })
+})
 
 
 function renderData(){
-    const url = "https://fakestoreapi.com/products"
+   
     fetch(url)
     .then(res => res.json())
     .then(data =>  data.map((element, i) => {
-        
+       
+
         let elItem = document.createElement("li")
         elItem.setAttribute("class", "pradact__card")    
         elItem.innerHTML = `
@@ -28,7 +60,7 @@ function renderData(){
             <div class="pradact__card__title">
             <h2>${element.price} ₽</h2>
             </div>
-            <h2>${element.title}</h2>
+            <h2 class="tt"> ${element.title}</h2>
            
             <div class="pradact__star">
             <i class="fa-solid fa-star"></i>
@@ -36,42 +68,24 @@ function renderData(){
             <i class="fa-regular fa-star"></i>
             <i class="fa-regular fa-star"></i>
             <i class="fa-regular fa-star"></i>
+            <button class="info">info</button>
             </div>
             <div class="pradact__btn">
-            <button class="pradact__btn__style">В корзину</button>
+            <button class="pradact__btn__style" onClick="karzinkaBtn(${element.id})" >В корзину</button>
             </div>
         `
+
         elList.appendChild(elItem)
     }))
-   
-}
+} 
+ 
 
 renderData(allProducts)
 
 renderData(allProducts)
 
 
-// elSearch.addEventListener("input", () => {
-//     let emptyArr = [];
 
-//     allProducts.map((item ) => {
-//         if(item.productName.includes(elSearch.value)){
-//             emptyArr.push(item)
-//         }
-        
-//     })
-//     if(emptyArr.length > 0){
-//         elList.innerHTML = ""
-//         renderData(emptyArr)
-//     }
-//     else{
-//         elList.innerHTML = "<h1>Data not found</h1>"
-
-//         // renderData(allProducts)
-
-//     }
-//     // console.log();
-// })
 
 
 
@@ -140,3 +154,27 @@ heart.addEventListener("click", (e) =>{
 })
 
 
+function karzinkaBtn(id) {
+    fetch(url)
+    .then(res => res.json())
+    .then(data =>  data.filter((item)=>{
+        if(item.id == id){
+            setProduct(item)
+         console.log(item.id);
+        }
+    }))
+   
+}
+
+
+
+function getProduct(){
+    return localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')):[];
+}
+
+function setProduct(cart){
+    let item = {cart};
+    prod = getProduct();
+    prod.push(item);
+    localStorage.setItem('cart',JSON.stringify(prod))
+}

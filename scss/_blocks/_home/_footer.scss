@@ -1,5 +1,14 @@
 .footer__list{
-   &__list{
-    display: flex;
-   }
+   display: flex;
+   gap: 10px;
+   justify-content: space-between;
+   align-items:center;
+   
+}
+.div-ul{
+   display: flex;
+   gap: 133px;
+}
+li{
+   list-style: none;
 }

@@ -302,26 +302,24 @@ main {
   margin-top: 50px;
   position: relative;
 }
+.pradact__card__tt {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 150%; /* 27px */
+}
 .pradact__card__title {
   display: flex;
   height: 40px;
   gap: 4px;
-}
-.pradact__card__title h2 {
-  color: var(--main-on-surface, #414141);
-  /* Desc/Text-Bold/M */
-  font-family: Rubik;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%; /* 27px */
 }
 .pradact__card__images {
   display: flex;
 }
 .pradact__card__images__photo {
   object-fit: contain;
-  width: 100%;
+  width: 60%;
   height: 250px;
 }
 .pradact__text {
@@ -408,8 +406,20 @@ main {
   right: 0;
 }
 
-.footer__list__list {
+.footer__list {
   display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.div-ul {
+  display: flex;
+  gap: 133px;
+}
+
+li {
+  list-style: none;
 }
 
 /*# sourceMappingURL=main.css.map */
